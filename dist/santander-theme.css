@@ -1,0 +1,268 @@
+/* Santander only: clear red/white contrast with restrained slate-blue accents. */
+body.santander-page{--paper:#fff;--ink:#302d2e;--muted:#686365;--line:#e4d9d7;--red:#b32d35;--yellow:#eee1dd;background:#eeeae7;color:var(--ink)}
+.santander-page ::selection{background:#e9c9c5;color:#302d2e}
+.santander-page main,.santander-page .site-header{background:#fff}
+.santander-page .case-top{background:#fff;color:#686365}
+.santander-page .case-top a,.santander-page .section-number,.santander-page .site-header nav a span,.santander-page .red-mark{color:#b32d35}
+.santander-page .case-top a:hover,.santander-page a:hover{color:#843638}
+.santander-page .case-hero{background:#fff}
+.santander-page .case-hero .case-subtitle{color:#686365}
+.santander-page .case-hero .case-meta{background:#f4eae7;border:1px solid #e4d9d7}
+.santander-page .case-meta span{color:#944144}
+.santander-page .case-banner.visual-cycle{background:#f4eae7}
+.santander-page .visual-cycle .route-line{background:#b32d35}
+.santander-page .visual-cycle .station{background:#fff;border-color:#b32d35}
+.santander-page .visual-cycle .station.s4{background:#627b85;border-color:#627b85}
+.santander-page .visual-label{background:#fff;color:#566d76}
+.santander-page .case-section,.santander-page .case-section:nth-of-type(even){background:#fff;color:#302d2e}
+.santander-page .case-section.dark,.santander-page .case-section.dark:nth-of-type(even){background:#faf5f3;color:#302d2e}
+.santander-page .case-section.dark .section-number{color:#b32d35}
+.santander-page .case-content>p,.santander-page .case-section.dark .case-content>p{color:#686365}
+.santander-page .case-card,.santander-page .case-section.dark .case-card{background:#fff;border:1px solid #e4d9d7}
+.santander-page .case-card h3{color:#302d2e}
+.santander-page .case-card p,.santander-page .case-section.dark .case-card p{color:#686365}
+.santander-page .case-card .mini-label,.santander-page .case-section.dark .case-card .mini-label{color:#b32d35}
+.santander-page .evidence-strip div,.santander-page .evidence-strip div:not(:first-child),.santander-page .case-section.dark .evidence-strip div{background:#f0e6e2}
+.santander-page .evidence-strip span{color:#944144}
+.santander-page .evidence-strip p,.santander-page .case-section.dark .evidence-strip p{color:#514b4d}
+.santander-page .note,.santander-page .case-section.dark .note{color:#686365;border-color:#b32d35}
+.santander-page .insight-map,.santander-page .dark .insight-map{--map-accent:#b32d35;--map-line:#dfd3d0;--map-soft:#f4eae7;color:#302d2e}
+.santander-page .map-bridge{color:#566d76;border-color:#bdc9cd}
+.santander-page .map-foundation{background:#edf1f2;color:#4c626b}
+.santander-page .map-foundation strong{color:#4c626b}
+.santander-page .map-node span,.santander-page .insight-map .map-note{color:#686365;opacity:1}
+.santander-page .case-next{background:#f4eae7}
+.santander-page .case-next>span{color:#944144}
+.santander-page .site-footer{background:#fff;color:#686365;border-top:1px solid #e4d9d7}
+/* Strong colour anchors; light sections retain breathing room. */
+.santander-page .case-banner.visual-cycle{background:#b32d35}
+.santander-page .visual-cycle .route-line{background:#f3c5c5}
+.santander-page .visual-cycle .station{background:#fff;border-color:#fff}
+.santander-page .visual-cycle .station.s4{background:#4c6671;border-color:#fff}
+.santander-page .visual-label{background:#fff;color:#8e252c}
+.santander-page .case-hero .case-meta{background:#fff;border:1px solid #dfc6c5;border-top:4px solid #b32d35}
+.santander-page .case-section.dark,.santander-page .case-section.dark:nth-of-type(even){background:#922b33;color:#fff}
+.santander-page .case-section.dark .section-number,.santander-page .case-section.dark .red-mark{color:#fff}
+.santander-page .case-section.dark .case-content>p,.santander-page .case-section.dark .note{color:#f8e9e8}
+.santander-page .case-section.dark .note{border-color:#e9b5b6}
+.santander-page .case-section.dark .case-card{background:#7c222a;border:1px solid #ac5359}
+.santander-page .case-section.dark .case-card h3{color:#fff}
+.santander-page .case-section.dark .case-card p{color:#f8e9e8}
+.santander-page .case-section.dark .case-card .mini-label{color:#f4cccc}
+.santander-page .case-section.dark .evidence-strip div{background:#7c222a}
+.santander-page .case-section.dark .evidence-strip span{color:#f4cccc}
+.santander-page .case-section.dark .evidence-strip p{color:#fff}
+
+.santander-page .research-scope{margin-top:clamp(2rem,4vw,4rem);padding:clamp(1.4rem,2.5vw,2.4rem);background:#bd3036;border:1px solid #ef8583;border-radius:22px}
+.santander-page .research-scope header{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);gap:1.5rem;align-items:start;margin-bottom:1.5rem}
+.santander-page .research-scope header>span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#ffd5d1}
+.santander-page .research-scope h3{margin:0;font-size:clamp(1.55rem,2.3vw,2.5rem);line-height:1.2;color:#fff}
+.santander-page .research-scope-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#ef8583;border:1px solid #ef8583}
+.santander-page .research-scope-grid article{min-height:170px;padding:1.25rem;background:#a92830}
+.santander-page .research-scope-grid b{color:#fff;font-size:1.05rem}
+.santander-page .research-scope-grid p{margin:.75rem 0 0;color:#fff1ef;line-height:1.7}
+.santander-page .santander-competitor-swot{width:100%;margin:clamp(2rem,4vw,4rem) 0;padding:clamp(.65rem,1.2vw,1rem);background:#fff;border:1px solid #ef8583;border-radius:22px;box-shadow:0 18px 55px rgba(85,20,24,.2)}
+.santander-page .competitor-swot-scroll{width:100%;overflow:auto}
+.santander-page .santander-competitor-swot img{display:block;width:100%;height:auto}
+.santander-page .santander-competitor-swot figcaption{display:grid;grid-template-columns:minmax(190px,.65fr) minmax(0,1.35fr);gap:1.5rem;padding:1.25rem .35rem .3rem;color:#76595a}
+.santander-page .santander-competitor-swot figcaption span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .santander-competitor-swot figcaption p{margin:0;line-height:1.65;color:#76595a}
+.santander-page .santander-competitor-swot + .santander-service-comparison{margin-top:1.25rem}
+.santander-page .case-next{background:#fff;border-top:3px solid #b32d35}
+
+/* Stakeholder-map palette: coral red, white, blush and deep brown-grey. */
+body.santander-page{--paper:#fffaf8;--ink:#4a3334;--muted:#76595a;--line:#efb4b1;--red:#ef4042;--yellow:#ffe0dc;background:#f7d6d2;color:var(--ink)}
+.santander-page ::selection{background:#ef4042;color:#fff}
+.santander-page main,.santander-page .site-header{background:#fffaf8}
+.santander-page .case-top{background:#fffaf8;color:#76595a}
+.santander-page .case-top a,.santander-page .section-number,.santander-page .site-header nav a span,.santander-page .red-mark{color:#ef4042}
+.santander-page .case-top a:hover,.santander-page a:hover{color:#bc3035}
+.santander-page .case-hero{background:#fffaf8}
+.santander-page .case-hero .case-subtitle{color:#76595a}
+.santander-page .case-hero .case-meta{background:#ffe4e0;border:1px solid #efb4b1;border-top:5px solid #ef4042}
+.santander-page .case-meta span{color:#b9363a}
+.santander-page .case-banner.visual-cycle{background:#ef4042}
+.santander-page .visual-cycle .route-line{background:#ffd3cf}
+.santander-page .visual-cycle .station{background:#fff;border-color:#fff}
+.santander-page .visual-cycle .station.s4{background:#68484a;border-color:#fff}
+.santander-page .visual-label{background:#fff;color:#bc3035}
+.santander-page .case-section,.santander-page .case-section:nth-of-type(even){background:#fffaf8;color:#4a3334}
+.santander-page .case-section:nth-of-type(odd){background:#fff0ed}
+.santander-page .case-content>p{color:#76595a}
+.santander-page .case-card{background:#fff;border:1px solid #efb4b1}
+.santander-page .case-card h3{color:#4a3334}
+.santander-page .case-card p{color:#76595a}
+.santander-page .case-card .mini-label{color:#d53a3e}
+.santander-page .note{color:#76595a;border-color:#ef4042}
+.santander-page .insight-map,.santander-page .dark .insight-map{--map-accent:#ef4042;--map-line:#efb4b1;--map-soft:#ffe4e0;color:#4a3334}
+.santander-page .map-bridge{color:#76595a;border-color:#dba29f}
+.santander-page .map-foundation{background:#ffe4e0;color:#a62f34}
+.santander-page .map-foundation strong{color:#a62f34}
+.santander-page .map-node span,.santander-page .insight-map .map-note{color:#76595a;opacity:1}
+.santander-page .case-next{background:#ffe4e0;border-top:3px solid #ef4042}
+.santander-page .case-next>span{color:#b9363a}
+.santander-page .site-footer{background:#fffaf8;color:#76595a;border-top:1px solid #efb4b1}
+
+/* Project opener: documentary image supplied for the Santander case study. */
+.santander-page .santander-hero-image{position:relative;width:auto!important;height:auto;min-height:0;aspect-ratio:2/1;background:#ef4042}
+.santander-page .santander-hero-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 8%}
+
+.santander-page .case-section.dark,.santander-page .case-section.dark:nth-of-type(even){background:#d83a3f;color:#fff}
+.santander-page .case-section.dark .section-number,.santander-page .case-section.dark .red-mark{color:#fff}
+.santander-page .case-section.dark .case-content>p,.santander-page .case-section.dark .note{color:#fff1ef}
+.santander-page .case-section.dark .note{border-color:#ffd0cc}
+.santander-page .case-section.dark .case-card{background:#bd3036;border:1px solid #ef8583}
+.santander-page .case-section.dark .case-card h3{color:#fff}
+.santander-page .case-section.dark .case-card p{color:#fff1ef}
+.santander-page .case-section.dark .case-card .mini-label{color:#ffd5d1}
+.santander-page .case-section.dark .evidence-strip div{background:#bd3036}
+.santander-page .case-section.dark .evidence-strip span{color:#ffd5d1}
+.santander-page .case-section.dark .evidence-strip p{color:#fff}
+
+.santander-page .stakeholder-section{background:#fff0ed!important}
+.santander-page .stakeholder-section .case-content{display:contents}
+.santander-page .stakeholder-section .case-content>h2,
+.santander-page .stakeholder-section .case-content>p{grid-column:2}
+.santander-page .stakeholder-evidence{grid-column:1/-1;width:100%;max-width:none;margin:clamp(2rem,4vw,4.5rem) 0 0}
+.santander-page .stakeholder-evidence img{display:block;width:100%;height:auto;border:1px solid #efb4b1;border-radius:22px;box-shadow:0 18px 55px rgba(126,44,47,.16)}
+.santander-page .stakeholder-evidence figcaption{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);gap:1.5rem;padding:1.15rem 0 0;color:#76595a;border-top:0}
+.santander-page .stakeholder-evidence figcaption span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .stakeholder-evidence figcaption p{margin:0;line-height:1.65}
+.santander-page .stakeholder-reading{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;width:100%;max-width:none;margin-top:2.5rem;background:#efb4b1;border:1px solid #efb4b1;border-radius:22px;overflow:hidden}
+.santander-page .stakeholder-reading article{display:flex;min-height:190px;flex-direction:column;padding:1.5rem;background:#fffaf8}
+.santander-page .stakeholder-reading article>span{font-size:.75rem;font-weight:800;letter-spacing:.1em;color:#d53a3e}
+.santander-page .stakeholder-reading strong{margin-top:1.5rem;font-size:1.35rem;color:#4a3334}
+.santander-page .stakeholder-reading p{margin:.75rem 0 0;color:#76595a;line-height:1.7}
+
+.santander-page .innovation-matrix-figure{margin:clamp(3rem,6vw,6rem) 0 0;padding:clamp(.65rem,1.2vw,1rem);background:#fff;border:1px solid #efb4b1;border-radius:22px;box-shadow:0 18px 55px rgba(126,44,47,.13)}
+.santander-page .innovation-matrix-figure img{display:block;width:100%;height:auto;border-radius:14px}
+.santander-page .innovation-matrix-figure figcaption{display:grid;grid-template-columns:minmax(190px,.65fr) minmax(0,1.35fr);gap:1.5rem;padding:1.25rem .35rem .3rem;color:#76595a}
+.santander-page .innovation-matrix-figure figcaption span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .innovation-matrix-figure figcaption p{margin:0;line-height:1.65}
+
+.santander-page .santander-problem-matrix{grid-column:1/-1;width:100%;max-width:none;margin:clamp(3rem,6vw,6rem) 0 0;padding:clamp(.65rem,1.2vw,1rem);background:#fff;border:1px solid #efb4b1;border-radius:22px;box-shadow:0 18px 55px rgba(126,44,47,.13)}
+.santander-page .matrix-scroll{width:100%;overflow:auto}
+.santander-page .santander-problem-matrix img{display:block;width:100%;height:auto;border-radius:14px}
+.santander-page .santander-problem-matrix figcaption{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);gap:1.5rem;padding:1.25rem .35rem .3rem;color:#76595a}
+.santander-page .santander-problem-matrix figcaption span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .santander-problem-matrix figcaption p{margin:0;line-height:1.65}
+.santander-page .synthesis-bridge{grid-column:1/-1;display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);column-gap:1.5rem;align-items:start;width:100%;margin-top:clamp(3rem,5vw,5rem);padding-top:clamp(1.5rem,3vw,3rem);border-top:1px solid #efb4b1}
+.santander-page .synthesis-bridge>span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .synthesis-bridge h3{grid-column:2;margin:0;font-size:clamp(1.8rem,3vw,3.2rem);line-height:1.12;letter-spacing:-.045em;color:#4a3334}
+.santander-page .synthesis-bridge p{grid-column:2;margin:.85rem 0 0;max-width:820px;color:#76595a;line-height:1.75}
+
+.santander-page .possible-innovations{grid-column:1/-1;width:100%;margin-top:clamp(3rem,5vw,5rem);padding:clamp(1.5rem,3vw,3rem);background:#fffaf8;border:1px solid #efb4b1;border-radius:22px;overflow:hidden}
+.santander-page .possible-innovations header{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);column-gap:1.5rem;align-items:start;margin-bottom:2rem}
+.santander-page .possible-innovations header>span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .possible-innovations h3{grid-column:2;margin:0;font-size:clamp(1.8rem,3vw,3.2rem);line-height:1.12;letter-spacing:-.045em;color:#4a3334}
+.santander-page .possible-innovations header p{grid-column:2;margin:.85rem 0 0;max-width:760px;color:#76595a;line-height:1.7}
+.santander-page .innovation-idea-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#efb4b1;border:1px solid #efb4b1}
+.santander-page .innovation-idea-grid article{min-height:245px;padding:1.35rem;background:#fff;display:flex;flex-direction:column}
+.santander-page .innovation-idea-grid article.featured{background:#fff0ed}
+.santander-page .innovation-idea-grid b{font-size:.78rem;color:#d53a3e}
+.santander-page .innovation-idea-grid article>span{margin-top:.45rem;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:#b96567}
+.santander-page .innovation-idea-grid h4{margin:2rem 0 .75rem;font-size:1.35rem;line-height:1.2;color:#4a3334}
+.santander-page .innovation-idea-grid p{margin:0;color:#76595a;line-height:1.7;font-size:.94rem}
+.santander-page .innovation-caveat{margin:1.5rem 0 0;padding-left:1rem;border-left:3px solid #d53a3e;color:#76595a;font-size:.9rem;line-height:1.7}
+.santander-page .decision-matrix-figure{grid-column:1/-1;width:100%;max-width:none;margin:1.25rem 0 0;padding:clamp(.65rem,1.2vw,1rem);background:#fff;border:1px solid #efb4b1;border-radius:22px;box-shadow:0 18px 55px rgba(126,44,47,.13)}
+.santander-page .decision-matrix-scroll{width:100%;overflow:auto}
+.santander-page .decision-matrix-figure img{display:block;width:100%;height:auto}
+.santander-page .decision-matrix-figure figcaption{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);gap:1.5rem;padding:1.25rem .35rem .3rem;color:#76595a}
+.santander-page .decision-matrix-figure figcaption span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .decision-matrix-figure figcaption p{margin:0;line-height:1.65}
+.santander-page .selection-summary{grid-column:1/-1;width:100%;margin-top:1.25rem;padding:clamp(1.5rem,3vw,3rem);background:#f5e3df;border-radius:22px}
+.santander-page .selection-summary header{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);column-gap:1.5rem;align-items:start;margin-bottom:1.5rem}
+.santander-page .selection-summary header>span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .selection-summary h3{grid-column:2;margin:0;font-size:clamp(1.8rem,3vw,3.2rem);line-height:1.12;letter-spacing:-.045em;color:#4a3334}
+.santander-page .selection-summary header p{grid-column:2;margin:.85rem 0 0;max-width:760px;color:#76595a;line-height:1.7}
+.santander-page .selection-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#dfb5b2;border:1px solid #dfb5b2}
+.santander-page .selection-grid article{padding:1.35rem;background:#fffaf8}
+.santander-page .selection-grid b{font-size:1.15rem;color:#4a3334}
+.santander-page .selection-grid p{margin:.75rem 0 0;color:#76595a;line-height:1.7}
+.santander-page .final-solutions-intro{grid-column:1/-1;display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);gap:1.5rem;width:100%;margin-top:clamp(3rem,6vw,6rem);padding-top:clamp(1.5rem,3vw,3rem);border-top:1px solid #efb4b1}
+.santander-page .final-solutions-intro>span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .final-solutions-intro h3{margin:0;font-size:clamp(2rem,3.5vw,3.8rem);line-height:1.08;letter-spacing:-.05em;color:#4a3334}
+.santander-page .final-solutions-intro p{max-width:760px;margin:1rem 0 0;color:#76595a;line-height:1.75}
+.santander-page .selected-concepts-section .final-solutions-intro{margin-top:0}
+.santander-page .final-solutions-intro + .route-incentive-flow{margin-top:2rem}
+.santander-page .route-incentive-flow{grid-column:1/-1;width:100%;max-width:none;margin:clamp(3rem,5vw,5rem) 0 0;padding:clamp(.65rem,1.2vw,1rem);background:#fff;border:1px solid #efb4b1;border-radius:22px;box-shadow:0 18px 55px rgba(126,44,47,.13)}
+.santander-page .route-flow-scroll{width:100%;overflow:auto}
+.santander-page .route-incentive-flow img{display:block;width:100%;height:auto;border-radius:14px}
+.santander-page .route-incentive-flow figcaption{display:grid;grid-template-columns:minmax(240px,.7fr) minmax(0,1.3fr);gap:1.5rem;padding:1.25rem .35rem .3rem;color:#76595a}
+.santander-page .route-incentive-flow figcaption span{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:#d53a3e}
+.santander-page .route-incentive-flow figcaption p{margin:0;line-height:1.65}
+.santander-page .solution-challenges{grid-column:1/-1;width:100%;margin:1.25rem 0 0;padding:clamp(1.4rem,2.5vw,2.4rem);background:#f5e3df;border-radius:22px}
+.santander-page .solution-challenges header{display:block;margin-bottom:1.5rem;text-align:left}
+.santander-page .solution-challenges h3{margin:0;text-align:left;font-size:clamp(1.55rem,2.3vw,2.5rem);line-height:1.2;color:#4a3334}
+.santander-page .solution-challenges + .route-incentive-flow{margin-top:clamp(1.5rem,2.5vw,2.5rem)}
+.santander-page .challenge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:#dfb5b2;border:1px solid #dfb5b2}
+.santander-page .challenge-grid article{min-height:175px;padding:1.25rem;background:#fffaf8}
+.santander-page .challenge-grid b{font-size:1.05rem;color:#4a3334}
+.santander-page .challenge-grid p{margin:.8rem 0 0;color:#76595a;font-size:.9rem;line-height:1.7}
+.santander-page .enterprise-pilot-note{grid-column:1/-1;margin:1.25rem 0 0;padding:1rem 1.2rem;border-left:3px solid #ef4042;color:#76595a;line-height:1.75}
+.santander-page .enterprise-pilot-note strong{color:#4a3334}
+.santander-page .closing-reflection{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:clamp(2rem,4vw,4rem) 0 2rem;background:#ef8583;border:1px solid #ef8583;border-radius:22px;overflow:hidden}
+.santander-page .closing-reflection article{min-height:210px;padding:1.35rem;background:#bd3036}
+.santander-page .closing-reflection span{font-size:.75rem;font-weight:800;letter-spacing:.09em;color:#ffd5d1}
+.santander-page .closing-reflection h3{margin:1.25rem 0 .7rem;font-size:1.2rem;color:#fff}
+.santander-page .closing-reflection p{margin:0;color:#fff1ef;line-height:1.7}
+
+.santander-page .references-section{background:#fffaf8!important}
+.santander-page .references-section .case-content{max-width:none}
+.santander-page .references-section .case-content>p{max-width:760px}
+.santander-page .references-list{columns:2;column-gap:clamp(2rem,5vw,5rem);margin:3.5rem 0 0;padding:0;list-style:none;counter-reset:reference}
+.santander-page .references-list li{position:relative;break-inside:avoid-column;margin:0;padding:1rem 0 1rem 2.2rem;border-top:1px solid #efb4b1;color:#624a4b;font-size:clamp(.78rem,.86vw,.95rem);line-height:1.62;overflow-wrap:anywhere;counter-increment:reference}
+.santander-page .references-list li::before{content:counter(reference,decimal-leading-zero);position:absolute;left:0;top:1rem;color:#ef4042;font-size:.7rem;font-weight:800;letter-spacing:.08em}
+.santander-page .references-list cite{font-style:normal;font-weight:700;color:#4a3334}
+.santander-page .references-list a{color:#c83238;font-size:0;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.santander-page .references-list a::after{content:attr(href);font-size:clamp(.78rem,.86vw,.95rem)}
+.santander-page .references-list a:hover{color:#861f24}
+
+@media (max-width:760px){
+  .santander-page .santander-hero-image{aspect-ratio:4/3}
+  .santander-page .santander-hero-image img{object-position:center center}
+  .santander-page .stakeholder-evidence{margin-top:2rem}
+  .santander-page .stakeholder-evidence img{border-radius:12px}
+  .santander-page .stakeholder-evidence figcaption{grid-template-columns:1fr;gap:.6rem}
+  .santander-page .stakeholder-reading{grid-template-columns:1fr;border-radius:12px}
+  .santander-page .stakeholder-reading article{min-height:0}
+  .santander-page .research-scope{padding:1rem;border-radius:12px}
+  .santander-page .research-scope header{grid-template-columns:1fr;gap:.7rem}
+  .santander-page .research-scope-grid{grid-template-columns:1fr}
+  .santander-page .research-scope-grid article{min-height:0}
+  .santander-page .santander-competitor-swot{border-radius:12px}
+  .santander-page .santander-competitor-swot img{width:1000px;max-width:none}
+  .santander-page .santander-competitor-swot figcaption{grid-template-columns:1fr;gap:.6rem;padding:1rem .15rem .2rem}
+  .santander-page .innovation-matrix-figure{margin-top:2.5rem;border-radius:12px}
+  .santander-page .innovation-matrix-figure img{border-radius:7px}
+  .santander-page .innovation-matrix-figure figcaption{grid-template-columns:1fr;gap:.6rem;padding:1rem .15rem .2rem}
+  .santander-page .santander-problem-matrix{margin-top:2.5rem;border-radius:12px}
+  .santander-page .santander-problem-matrix img{width:900px;max-width:none;border-radius:7px}
+  .santander-page .santander-problem-matrix figcaption{grid-template-columns:1fr;gap:.6rem;padding:1rem .15rem .2rem}
+  .santander-page .synthesis-bridge{grid-template-columns:1fr;gap:.7rem}
+  .santander-page .synthesis-bridge h3,.santander-page .synthesis-bridge p{grid-column:1}
+  .santander-page .possible-innovations{padding:1rem;border-radius:12px}
+  .santander-page .possible-innovations header{grid-template-columns:1fr;gap:.7rem}
+  .santander-page .possible-innovations h3,.santander-page .possible-innovations header p{grid-column:1}
+  .santander-page .innovation-idea-grid{grid-template-columns:1fr}
+  .santander-page .innovation-idea-grid article{min-height:0}
+  .santander-page .decision-matrix-figure{border-radius:12px}
+  .santander-page .decision-matrix-figure img{width:1000px;max-width:none}
+  .santander-page .decision-matrix-figure figcaption{grid-template-columns:1fr;gap:.6rem;padding:1rem .15rem .2rem}
+  .santander-page .selection-summary{padding:1rem;border-radius:12px}
+  .santander-page .selection-summary header{grid-template-columns:1fr;gap:.7rem}
+  .santander-page .selection-summary h3,.santander-page .selection-summary header p{grid-column:1}
+  .santander-page .selection-grid{grid-template-columns:1fr}
+  .santander-page .final-solutions-intro{grid-template-columns:1fr;gap:.7rem}
+  .santander-page .route-incentive-flow{border-radius:12px}
+  .santander-page .route-incentive-flow img{width:1100px;max-width:none;border-radius:7px}
+  .santander-page .route-incentive-flow figcaption{grid-template-columns:1fr;gap:.6rem;padding:1rem .15rem .2rem}
+  .santander-page .solution-challenges{padding:1rem;border-radius:12px}
+  .santander-page .solution-challenges header{display:block}
+  .santander-page .challenge-grid{grid-template-columns:1fr}
+  .santander-page .challenge-grid article{min-height:0}
+  .santander-page .closing-reflection{grid-template-columns:1fr;border-radius:12px}
+  .santander-page .closing-reflection article{min-height:0}
+  .santander-page .references-list{columns:1;margin-top:2.5rem}
+}
+
