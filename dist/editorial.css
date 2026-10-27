@@ -11,24 +11,6 @@ body.home-page{background:#f1eee5}
 .hero.editorial-hero{display:block;position:relative;height:min(78svh,780px);min-height:610px;margin:0 30px;border-radius:0 0 48px 48px;overflow:hidden;background:#239fc4}.editorial-hero:before,.editorial-hero:after,.editorial-hero .hero-side{display:none}
 .hero-image{position:absolute;inset:0;background:url('images/home-hero.webp') center 60%/cover no-repeat}.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,37,51,.48),transparent 26%),linear-gradient(90deg,rgba(11,34,45,.56) 0%,rgba(11,34,45,.18) 48%,transparent 84%),linear-gradient(0deg,rgba(11,34,45,.32),transparent 46%)}
 
-/* First-entry loader: every visible form is built from the two original logo paths. */
-.portfolio-loader{display:none;position:fixed;inset:0;z-index:100000;place-items:center;background:#f7f7f3;color:#073d59;opacity:1;visibility:visible;transition:opacity .34s ease,visibility .34s step-end;isolation:isolate}
-.portfolio-loading,.portfolio-loading body{overflow:hidden}
-.portfolio-loading .portfolio-loader{display:grid}
-.portfolio-loader.is-complete{opacity:0;visibility:hidden;pointer-events:none}
-.logo-morph{display:block;width:clamp(116px,17vw,210px);height:auto;overflow:visible;fill:currentColor;filter:drop-shadow(0 18px 34px rgba(7,61,89,.13))}
-.morph-stage{opacity:0;transform-box:view-box;transform-origin:center;will-change:opacity,transform}
-.morph-logo{animation:loader-logo 3.55s cubic-bezier(.4,0,.2,1) both}
-.morph-plane{animation:loader-plane 3.55s cubic-bezier(.4,0,.2,1) both}
-.morph-car{animation:loader-car 3.55s cubic-bezier(.4,0,.2,1) both}
-.morph-eye{animation:loader-eye 3.55s cubic-bezier(.4,0,.2,1) both}
-.loader-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@keyframes loader-logo{0%{opacity:0;transform:scale(.7) rotate(-12deg)}5%,15%{opacity:1;transform:scale(1) rotate(0)}22%,80%{opacity:0;transform:scale(1.13) rotate(8deg)}87%{opacity:0;transform:scale(.72) rotate(-8deg)}93%{opacity:1;transform:scale(1) rotate(0)}100%{opacity:0;transform:scale(1.08)}}
-@keyframes loader-plane{0%,15%{opacity:0;transform:translateY(30px) scale(.75) rotate(-14deg)}23%,34%{opacity:1;transform:translateY(0) scale(1) rotate(0)}42%,100%{opacity:0;transform:translateY(-40px) scale(1.12) rotate(12deg)}}
-@keyframes loader-car{0%,35%{opacity:0;transform:translateX(-45px) scale(.82)}43%,55%{opacity:1;transform:translateX(0) scale(1)}63%,100%{opacity:0;transform:translateX(48px) scale(.84)}}
-@keyframes loader-eye{0%,56%{opacity:0;transform:scale(.72)}64%,76%{opacity:1;transform:scale(1)}69%{opacity:1;transform:scaleY(.08)}72%{opacity:1;transform:scaleY(1)}84%,100%{opacity:0;transform:scale(1.16)}}
-@media(prefers-reduced-motion:reduce){.portfolio-loader{display:none!important}.portfolio-loading,.portfolio-loading body{overflow:auto}.morph-stage{animation:none!important}}
-@media(max-width:700px){.logo-morph{width:142px}.portfolio-loader{background:#f7f7f3}}
 .editorial-hero>.site-header{position:absolute;top:0;left:0;right:0;z-index:4;width:100%;height:78px;margin:0;padding:0 clamp(26px,4.5vw,70px);background:transparent;border:0;color:#fff}.editorial-hero .brand img{filter:brightness(0) invert(1)}.editorial-hero .site-header nav a{text-shadow:0 1px 7px rgba(7,34,46,.55)}.editorial-hero .site-header nav a span{color:var(--yellow)}.editorial-hero .site-header nav a:hover{color:var(--yellow)}
 .editorial-hero .hero-index{position:absolute;z-index:2;top:112px;left:clamp(26px,4.5vw,70px);padding:0;color:#fff;font-size:12px;letter-spacing:.12em;text-shadow:0 1px 7px #0b526d}.editorial-hero .hero-index span{display:block;margin-top:8px;font-weight:500;letter-spacing:.03em}
 .editorial-hero .hero-main{position:absolute;z-index:2;left:clamp(26px,4.5vw,70px);right:25px;bottom:130px;padding:0}.editorial-hero h1{max-width:960px;margin:0;color:#fff;font-size:clamp(50px,6.6vw,96px);line-height:1.05;letter-spacing:-.09em;font-weight:800;white-space:normal;text-shadow:0 4px 30px rgba(4,46,63,.23)}.editorial-hero .hero-main p{color:#fff;font-size:clamp(15px,1.5vw,21px);font-weight:600;line-height:1.55;margin:22px 0 0;text-shadow:0 2px 9px #0b526d}

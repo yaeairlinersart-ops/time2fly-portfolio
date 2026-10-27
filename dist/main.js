@@ -1,41 +1,3 @@
-// First visit: keep the logo transformation visible while the homepage imagery preloads.
-(() => {
-  const root = document.documentElement;
-  const loader = document.querySelector('#portfolio-loader');
-  const forcePreview = new URLSearchParams(location.search).has('preview-loader');
-  const shouldRun = root.classList.contains('portfolio-loading') && loader;
-  const preloadImage = (src) => new Promise((resolve) => {
-    const image = new Image();
-    image.decoding = 'async';
-    image.onload = image.onerror = resolve;
-    image.src = src;
-  });
-
-  if (!shouldRun) return;
-
-  const startedAt = performance.now();
-  const minimumDisplay = 3550;
-  const maximumDisplay = 4200;
-  const criticalImageReady = preloadImage('images/home-hero.webp');
-  const minimumElapsed = new Promise((resolve) => setTimeout(resolve, minimumDisplay));
-  const hardStop = new Promise((resolve) => setTimeout(resolve, maximumDisplay));
-
-  const finish = () => {
-    const elapsed = performance.now() - startedAt;
-    loader.classList.add('is-complete');
-    root.classList.remove('portfolio-loading');
-    if (!forcePreview) {
-      try { sessionStorage.setItem('portfolio-loader-seen', '1'); } catch {}
-    }
-    setTimeout(() => loader.remove(), Math.max(360, 390 - elapsed));
-  };
-
-  Promise.race([
-    Promise.all([minimumElapsed, criticalImageReady]),
-    hardStop
-  ]).then(finish, finish);
-})();
-
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
     const target = document.querySelector(link.getAttribute('href'));
@@ -299,14 +261,16 @@ if (santanderValueSection) {
     event.preventDefault();
     if (entering) return;
     entering = true;
-    const projectReady = warmProject(destination);
+    // Start loading the destination immediately, without tying navigation timing to the request.
+    warmProject(destination);
 
     overlay = document.createElement('div');
     overlay.setAttribute('role', 'status');
     overlay.setAttribute('aria-live', 'polite');
     const theme = projectThemes[destinationPage];
     const isRadioed = destinationPage === 'radioed.html';
-    const warmupDeadline = new Promise((resolve) => setTimeout(resolve, isRadioed ? 1000 : 750));
+    const transitionDuration = isRadioed ? 3500 : 2500;
+    const fixedDuration = new Promise((resolve) => setTimeout(resolve, transitionDuration));
     overlay.style.cssText = `position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:${theme.background};color:${theme.logo};cursor:wait`;
     const radioLanguageLines = [
       { lang: 'zh-CN', text: '团结人类，为了每一个孩子' },
@@ -346,20 +310,20 @@ if (santanderValueSection) {
           { transform: 'translate(-110px, -230px) rotate(-8deg)', offset: .52 },
           { transform: 'translate(0, 22px) rotate(0deg)', offset: .82 },
           { transform: 'translate(0, 0) rotate(0deg)', offset: 1 }
-        ], { duration: isRadioed ? 650 : 520, easing: 'ease-in-out', fill: 'forwards' }).finished,
+        ], { duration: isRadioed ? 1400 : 1000, easing: 'ease-in-out', fill: 'forwards' }).finished,
         circle.animate([
           { transform: 'translate(150px, 80px)' },
           { transform: 'translate(0, 0)' }
-        ], { duration: isRadioed ? 650 : 520, easing: 'ease-in-out', fill: 'forwards' }).finished
+        ], { duration: isRadioed ? 1400 : 1000, easing: 'ease-in-out', fill: 'forwards' }).finished
       ]);
       await logo.animate([
         { transform: 'rotate(0deg)' },
         { transform: 'rotate(720deg)' }
-      ], { duration: isRadioed ? 450 : 300, easing: 'cubic-bezier(.45,0,.25,1)', fill: 'forwards' }).finished;
+      ], { duration: isRadioed ? 2100 : 1500, easing: 'cubic-bezier(.45,0,.25,1)', fill: 'forwards' }).finished;
     } catch {
       // A cancelled animation must never prevent navigation.
     }
-    await Promise.race([projectReady, warmupDeadline]);
+    await fixedDuration;
     location.assign(destination.href);
   });
 })();
