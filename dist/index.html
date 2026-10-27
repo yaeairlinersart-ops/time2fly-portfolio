@@ -7,11 +7,75 @@
   <meta name="description" content="董耀天的服务设计创新作品集，包含用户研究、服务系统与出行体验项目。">
   <title>董耀天｜服务设计创新作品集</title>
   <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="preload" href="images/home-hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <script>
+    (() => {
+      const forcePreview = new URLSearchParams(location.search).has('preview-loader');
+      const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      try {
+        if (!reduceMotion && (forcePreview || !sessionStorage.getItem('portfolio-loader-seen'))) {
+          document.documentElement.classList.add('portfolio-loading');
+        }
+      } catch {
+        if (!reduceMotion) document.documentElement.classList.add('portfolio-loading');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="editorial.css">
   <script src="main.js" defer></script>
 </head>
 <body class="home-page">
+  <div class="portfolio-loader" id="portfolio-loader" role="status" aria-live="polite" aria-label="正在加载作品集">
+    <svg class="logo-morph" viewBox="0 0 850.39 850.39" aria-hidden="true">
+      <defs>
+        <path id="loader-chevron" d="M421.3,72.14c13.88-1.17,27.81,4.16,38.4,12.89l317.59,291.34c41.1,47.18-15.58,112.84-68.11,78.61L425.47,195.71,141.22,454.98c-52.53,34.22-109.22-31.42-68.11-78.61L389.94,85.78c8.76-7.59,19.7-12.66,31.36-13.64Z"/>
+        <path id="loader-ring" d="M413.8,386.59c146.34-8.41,250.36,141.66,190.52,276.01-61.73,138.61-252.57,156.92-339.77,32.52-88.06-125.64-3.3-299.77,149.24-308.53ZM423.56,490.81c-74.09,1.33-115.69,85.85-72.15,145.95,38.21,52.74,119.21,48.67,152.38-7.19,36.61-61.65-8.64-140.05-80.23-138.76Z"/>
+      </defs>
+
+      <g class="morph-stage morph-logo">
+        <use href="#loader-chevron"/>
+        <use href="#loader-ring"/>
+      </g>
+
+      <g class="morph-stage morph-plane">
+        <g transform="translate(425.2 420) rotate(90) scale(.82 .62) translate(-425.2 -264)">
+          <use href="#loader-chevron"/>
+        </g>
+        <g transform="translate(425.2 425.2) scale(.26 .92) translate(-425.2 -570)">
+          <use href="#loader-ring"/>
+        </g>
+        <g transform="translate(425.2 623) rotate(-90) scale(.24 .3) translate(-425.2 -264)">
+          <use href="#loader-chevron"/>
+        </g>
+      </g>
+
+      <g class="morph-stage morph-car">
+        <g transform="translate(425.2 430) scale(.78 .48) translate(-425.2 -264)">
+          <use href="#loader-chevron"/>
+        </g>
+        <g transform="translate(286 626) scale(.2) translate(-425.2 -570)">
+          <use href="#loader-ring"/>
+        </g>
+        <g transform="translate(564 626) scale(.2) translate(-425.2 -570)">
+          <use href="#loader-ring"/>
+        </g>
+      </g>
+
+      <g class="morph-stage morph-eye">
+        <g transform="translate(425.2 375) scale(.78 .46) translate(-425.2 -264)">
+          <use href="#loader-chevron"/>
+        </g>
+        <g transform="translate(425.2 475) rotate(180) scale(.78 .46) translate(-425.2 -264)">
+          <use href="#loader-chevron"/>
+        </g>
+        <g transform="translate(425.2 425.2) scale(.36) translate(-425.2 -570)">
+          <use href="#loader-ring"/>
+        </g>
+      </g>
+    </svg>
+    <span class="loader-status">正在加载作品集</span>
+  </div>
   <a class="skip-link" href="#main">跳至内容</a>
   <main id="main">
     <section class="hero editorial-hero" aria-labelledby="hero-title">
@@ -37,27 +101,27 @@
       <div class="project-list">
         <a class="project-row" href="workplace.html" aria-label="查看 Workplace Futures Group 项目">
           <span class="project-no">01</span><span class="project-title">办公空间循环服务模式<small>Workplace Futures Group</small></span><span class="project-type">服务创新 / 商业模式</span>
-          <span class="project-visual visual-workplace" aria-hidden="true"></span>
+          <span class="project-visual visual-workplace" aria-hidden="true"><img src="images/home-workplace.webp" alt="" width="1024" height="768" loading="lazy" decoding="async" fetchpriority="low"></span>
         </a>
         <a class="project-row" href="santander.html" aria-label="查看 Santander Cycles 项目">
           <span class="project-no">02</span><span class="project-title">伦敦共享单车服务研究<small>Santander Cycles · London</small></span><span class="project-type">用户研究 / 服务系统</span>
-          <span class="project-visual visual-cycle" aria-hidden="true"></span>
+          <span class="project-visual visual-cycle" aria-hidden="true"><img src="images/home-santander.webp" alt="" width="1200" height="800" loading="lazy" decoding="async" fetchpriority="low"></span>
         </a>
         <a class="project-row" href="radioed.html" aria-label="查看 RadioEd 项目">
           <span class="project-no">03</span><span class="project-title">社区离线学习服务概念<small>RadioEd · Team Concept</small></span><span class="project-type">社会创新 / 服务概念</span>
-          <span class="project-visual visual-radio" aria-hidden="true"></span>
+          <span class="project-visual visual-radio" aria-hidden="true"><img src="images/home-radioed.webp" alt="" width="1140" height="856" loading="lazy" decoding="async" fetchpriority="low"></span>
         </a>
         <a class="project-row" href="bus.html" aria-label="查看伦敦公交候车体验项目">
           <span class="project-no">04</span><span class="project-title">伦敦公交候车体验研究<small>TfL Bus Stop · London</small></span><span class="project-type">体验研究 / 创意概念</span>
-          <span class="project-visual visual-bus" aria-hidden="true"></span>
+          <span class="project-visual visual-bus" aria-hidden="true"><img src="images/home-bus.webp" alt="" width="948" height="448" loading="lazy" decoding="async" fetchpriority="low"></span>
         </a>
         <a class="project-row project-row-wip" href="#rally-wip" data-wip-project aria-haspopup="dialog" aria-controls="rally-wip-dialog" aria-label="中国拉力赛经济与服务生态个人研究项目仍在研究中">
           <span class="project-no">05</span><span class="project-title">中国拉力赛经济与服务生态<small><b class="project-wip">WIP</b>个人研究项目</small></span><span class="project-type">赛事经济 / 服务设计研究</span>
-          <span class="project-visual visual-rally-economy" aria-hidden="true"></span>
+          <span class="project-visual visual-rally-economy" aria-hidden="true"><img src="images/home-rally.webp" alt="" width="1200" height="764" loading="lazy" decoding="async" fetchpriority="low"></span>
         </a>
         <a class="project-row" href="dissertation.html" aria-label="查看机场旅客流程理解硕士毕业论文研究">
           <span class="project-no">06</span><span class="project-title">机场旅客流程理解研究<small>硕士毕业论文</small></span><span class="project-type">毕业论文 / 用户研究</span>
-          <span class="project-visual visual-dissertation" aria-hidden="true"></span>
+          <span class="project-visual visual-dissertation" aria-hidden="true"><img src="images/home-airport.webp" alt="" width="1000" height="667" loading="lazy" decoding="async" fetchpriority="low"></span>
         </a>
       </div>
     </section>
