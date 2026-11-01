@@ -13,10 +13,29 @@ const rallyWipLink = document.querySelector('[data-wip-project]');
 const rallyWipDialog = document.querySelector('#rally-wip-dialog');
 const rallyWipVideo = rallyWipDialog?.querySelector('video');
 if (rallyWipLink && rallyWipDialog instanceof HTMLDialogElement) {
+  const warmRallyVideo = () => {
+    if (!(rallyWipVideo instanceof HTMLVideoElement) || rallyWipVideo.preload === 'auto') return;
+    rallyWipVideo.preload = 'auto';
+    rallyWipVideo.load();
+  };
+  const saveData = navigator.connection?.saveData === true;
+  if (!saveData && 'IntersectionObserver' in window) {
+    const rallyVideoObserver = new IntersectionObserver((entries, observer) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      warmRallyVideo();
+      observer.disconnect();
+    }, { rootMargin: '600px 0px' });
+    rallyVideoObserver.observe(rallyWipLink);
+  }
+  if (!saveData) {
+    rallyWipLink.addEventListener('pointerenter', warmRallyVideo, { once: true });
+    rallyWipLink.addEventListener('focus', warmRallyVideo, { once: true });
+  }
   rallyWipLink.addEventListener('click', (event) => {
     event.preventDefault();
     rallyWipDialog.showModal();
     if (rallyWipVideo instanceof HTMLVideoElement) {
+      warmRallyVideo();
       rallyWipVideo.muted = true;
       rallyWipVideo.currentTime = 0;
       rallyWipVideo.play().catch(() => {});
