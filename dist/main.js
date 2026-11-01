@@ -11,13 +11,22 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 // Keep the ongoing rally study visible on the homepage without opening its case page.
 const rallyWipLink = document.querySelector('[data-wip-project]');
 const rallyWipDialog = document.querySelector('#rally-wip-dialog');
+const rallyWipVideo = rallyWipDialog?.querySelector('video');
 if (rallyWipLink && rallyWipDialog instanceof HTMLDialogElement) {
   rallyWipLink.addEventListener('click', (event) => {
     event.preventDefault();
     rallyWipDialog.showModal();
+    if (rallyWipVideo instanceof HTMLVideoElement) {
+      rallyWipVideo.muted = true;
+      rallyWipVideo.currentTime = 0;
+      rallyWipVideo.play().catch(() => {});
+    }
   });
   rallyWipDialog.addEventListener('click', (event) => {
     if (event.target === rallyWipDialog) rallyWipDialog.close();
+  });
+  rallyWipDialog.addEventListener('close', () => {
+    if (rallyWipVideo instanceof HTMLVideoElement) rallyWipVideo.pause();
   });
 }
 
